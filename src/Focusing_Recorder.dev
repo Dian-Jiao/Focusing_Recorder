@@ -33,20 +33,20 @@ UnitCount=1
 
 [VersionInfo]
 Major=1
-Minor=2
+Minor=3
 Release=0
 Build=0
 LanguageID=1033
 CharsetID=1252
 CompanyName=yhcz171726
-FileVersion=1.2.0.0
+FileVersion=1.3.0.0
 FileDescription=Focusing Recorder
 InternalName=
 LegalCopyright=Copyright (C) 2018-2020 Dian_Jiao, All Rights Reserved.
 LegalTrademarks=
 OriginalFilename=
 ProductName=
-ProductVersion=1.2.0.0
+ProductVersion=1.3.0.0
 AutoIncBuildNr=0
 SyncProduct=1
 
