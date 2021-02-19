@@ -125,9 +125,29 @@ int hm(const char* ProcessName)  	//函数，获取某个名字的进程有多少个
 	CloseHandle(hSnapshot);
 	return a;
 }
+void rechecktime()
+{
+	SYSTEMTIME curTime;
+	GetLocalTime(&curTime);
+	if(sheet[n].year==curTime.wYear&&sheet[n].month==curTime.wMonth&&sheet[n].day==curTime.wDay)
+	{
+		sheet[n].total++;
+		sheet[n].time=ftot;
+		sheet[n].rest=rtot;
+	}
+	else
+	{
 
+		n++;
+		sheet[n].year=curTime.wYear,sheet[n].month=curTime.wMonth,sheet[n].day=curTime.wDay;
+		sheet[n].total=1;
+		sheet[n].time=ftot;
+		sheet[n].rest=rtot;
+	}
+}
 void gout()  	//函数，输出时间记录
 {
+	rechecktime();
 	ofstream fout;
 	fout.open("Time Recording.csv");
 	fout<<"Date,Focus Time,Rest Time\n";
